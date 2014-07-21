@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>j5g3 - HTML5 Game Development Tools</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	
+	<link id="stylesheet" rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<section class="tab-pane fade active in" id="home">
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner">
+		<div class="bg-1 item active">
+			<div class="container">
+			<h1>Javascript<br>Graphics<br/>Engine</h1>
+			<h2>Cross-Platform, Cross-Device</h2>
+			<p>
+				<a class="btn" href="https://github.com/giancarlo/j5g3">Source Code</a>
+				<a class="btn" href="https://giancarlo.github.io/j5g3/docs">Documentation</a>
+				<a data-toggle="tab" href="#j5g3" class="btn btn-primary">Learn More</a>
+			</p>
+			</div>
+		</div>
+		<div class="bg-3 item">
+			<div class="container">
+			<h1>Mobile and<br>Desktop<br> Games</h1>
+			<h2>Code Once, Play Everywhere</h2>
+			<p>
+				<a data-toggle="tab" href="#games" class="btn btn-primary">See More</a>
+			</p>
+			</div>
+		</div>
+		<div class="bg-2 item">
+			<div class="container">
+			<h1>Open Source<br>Libraries</h1>
+			<h2>GPLv3 and Commercial<br> Licenses Available</h2>
+			<p>
+				<a data-toggle="tab" href="#code" class="btn btn-primary">See More</a>
+			</p>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+	</div>
+</section>
+<section class="bg-1 tab-pane fade" id="j5g3">
+	<div class="container">
+		<h1>Try it Now</h1>
+		<h2>Javascript Graphics Engine</h2>
+		<p class="text-center">Create games and animations for your site or mobila app
+		with the j5g3 Engine. Visit the 
+			<a href="https://github.com/giancarlo/j5g3">github</a> page for the source code
+			and <a href="https://giancarlo.github.io/j5g3/docs">documentation</a>.
+		</p>
+		<div id="demo" class="row">
+			<div class="col-sm-8">
+				<canvas width="640" height="480" class="img-responsive" id="screen"></canvas>
+			</div>
+			<div class="col-sm-4">
+				
+				<h3>Select a Demo:</h3>
+	
+				<select id="demos">
+						<option></option>
+					<optgroup label="j5g3">
+						<option>Life</option>
+						<option>Fire</option>
+						<option>Easing</option>
+						<option>Particles</option>
+						<option>Isometric</option>
+						<option>Tunnel</option>
+						<option>Shapes</option>
+						<option>Animation</option>
+						<option>Clock</option>
+						<option>Transformation</option>
+						<option>Radial</option>
+					</optgroup>
+					<optgroup label="Games">
+						<option>Pong</option>
+					</optgroup>
+				</select>
+	
+				<p>
+				<a href="javascript:view_source()" id="view-source">Demo Source</a>
+				</p>
+				
+		<h3>Features</h3>
+		<ul>
+		<li>Layer Support
+		<li>Spritesheet Animations.
+		<li>Tweening system. Easing Algorithms.
+		<li>Tiled/Isometric Engine.
+		<li>Particle Emitters
+		<li>Collision Detection.
+		<li>Assets Loader.
+		</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+<section class="bg-3 tab-pane fade" id="games">
+	<div class="container">
+		<h1>HTML5 Games</h1>
+		<h2>Licensing Available</h2>
+		<p class="text-center">All games work on HTML5 compatible devices, including mobile, and are
+		fully customizable.<br> <a data-toggle="tab" href="#docs">Contact us</a> for licensing and branding information.</p>
+		<div class="game asteroids">
+			<h3>Asteroids</h3>
+			<p>A Classic Space Shooter Game.</p>
+			<a data-toggle="tab" class="btn" href="#docs">Buy License</a>
+			<a class="btn btn-success" href="http://work.bellido.us/cxl-asteroids">Play!</a>
+		</div>
+		<div class="game underground">
+			<h3>Underground</h3>
+			<p>An isometric map game, based on Sokoban.</p>
+			<a data-toggle="tab" class="btn" href="#docs">Buy License</a>
+			<a class="btn btn-success" href="https://j5g3.github.io/underground">Play!</a>
+		</div>
+		<div class="game blocks">
+			<h3>Blocks</h3>
+			<p>Tetris clone. Supports touch devices.</p>
+			<a data-toggle="tab" class="btn" href="#docs">Buy License</a>
+			<a class="btn btn-success" href="https://coaxialsoftware.github.io/blocks">Play!</a>
+		</div>
+		<div class="game bubbles">
+			<h3>Bubbles</h3>
+			<p>Combine bubbles and Pop them all.</p>
+			<a data-toggle="tab" class="btn" href="#docs">Buy License</a>
+			<a class="btn btn-success" href="https://giancarlo.github.io/bubbles">Play!</a>
+		</div>
+	</div>
+</section>
+<section class="bg-1 tab-pane fade" id="code">
+	<div class="container">
+		<h1>Javascript</h1>
+		<h2>Fully documented and Tested</h2>
+		<p class="text-center">If you use or wish to use any of the j5g3 libraries, consider buying a 
+		license. It will help me spend more time on their development.</p>
+		<p class="text-center">File bugs and feature requests in the project's github page.</p>
+		
+		<div class="game j5g3">
+			<h3>j5g3</h3>
+			<p>Open Source Game and Graphics Engine.</p>
+			<a class="btn" href="https://github.com/giancarlo/j5g3">Source</a>
+			<a class="btn" href="https://giancarlo.github.io/j5g3/docs">Documentation</a>
+			<a class="btn" data-toggle="tab" href="#j5g3">Learn More</a>
+			<a data-toggle="tab" class="btn btn-primary" href="#docs">Buy License</a>
+		</div>
+		<div class="game j5g3-in">
+			<h3>j5g3.in</h3>
+			<p>Open Source Keyboard, Mouse and Touch Input Library.</p>
+			<a class="btn" href="https://github.com/j5g3/in">Source</a>
+			<a class="btn" href="https://j5g3.github.com/in/docs">Documentation</a>
+			<a data-toggle="tab" class="btn btn-primary" href="#docs">Buy License</a>
+		</div>
+		<div class="game docma">
+			<h3>docma</h3>
+			<p>Javascript Documentation Generator.</p>
+			<a class="btn" href="https://github.com/j5g3/docma">Source</a>
+			<a class="btn" href="https://j5g3.github.io/docma/docs">Documentation</a>
+			<a data-toggle="tab" class="btn btn-primary" href="#docs">Buy License</a>
+		</div>
+	</div>
+</section>
+<section class="bg-1 tab-pane fade" id="docs">
+	<div class="container">
+		<h1>Development<br>and Licensing</h1>
+		<h2>Lets Talk About Your Project</h2>
+		<p class="text-center" >Are you looking to engage your customers with social or casual games?<br>
+		Do you want your mobile apps to be animated and interactive?<br> Are you looking for a developer
+		for your next html5/javascript project?<br>Then lets Talk.</p>
+		
+		<div class="game">
+			<h3>Contact Information</h3>
+			<p><a href="mailto:giancarlo@bellido.us">Send me an E-mail</a></p>
+			<p><a href="https://github.com/j5g3"><img src="img/github.png" /></a>
+			<a href="https://twitter.com/debuggerjs"><img src="img/twitter.png" /></a></p>
+		</div>
+		
+	</div>
+</section>
+
+<header class="container">
+<div class="row">
+	<div class="col-sm-4">
+		<a id="logo-container" data-toggle="tab" class="active" href="#home">
+			<img class="logo" src="img/j5g3-logo.png" />
+			<img class="logo retro" src="img/j5g3-logo-retro-white.png" />
+		</a>
+	</div>
+	<div id="menu" class="col-sm-8">
+		<nav>
+			<a data-toggle="tab" href="#games">Games</a>
+			<a data-toggle="tab" href="#code">Code</a>
+			<a data-toggle="tab" href="#docs">Contact</a>
+		</nav>
+	</div>
+</div></header>
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//giancarlo.github.io/j5g3/build/j5g3-all.min.js"></script>
+<script src="//j5g3.github.io/in/build/j5g3-in-all.min.js"></script>
+<script src="demo.js"></script>
+
+</body>
+</html>

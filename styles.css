@@ -1,0 +1,73 @@
+body { font-family: 'Audiowide', sans-serif; padding: 20px; color: #eee; background: #000;}
+
+.logo {
+	position: absolute; margin: 20px 0 20px 0; width: 240px; height: 284px; display: block;
+	transition: opacity 0.5s;
+}
+.logo.retro { position: absolute; opacity: 0; }
+a:hover .logo { opacity: 0; }
+a:hover .logo.retro { opacity: 1.0; }
+
+#menu nav { float: right; background-color: rgba(0,0,0,0.5); font-size: 30px; }
+#menu nav a {  text-decoration: none; display: inline-block; margin: 10px; }
+
+a { text-decoration: underline; color: #eee; transition: color 0.5s;}
+a:hover { color: #428bca; }
+a.btn:hover { color: #fff; }
+
+section {
+	position: absolute; display: none; top: 0; right: 0; left: 0; bottom: 0;
+	background-position: 50% 50%; background-attachment: fixed;
+	background-size: auto 100%;
+	overflow: auto; text-align: right;
+}
+section.active { display: block; }
+section .container { padding: 130px 40px 0 40px; }
+
+#carousel { width: 100%; height: 100%; }
+#carousel .carousel-inner { width: 100%; height: 100%; }
+#carousel .item { text-align: right; background-size: auto 120%; background-position: 50% 50%; width: 100%; height: 100%; }
+#carousel a.btn { position: relative;z-index: 100; }
+
+h1 { margin-bottom: 30px; text-transform: uppercase; font: 60px 'Oswald'; font-weight: 700; line-height: 80px; color: #eee; }
+h2 { margin-bottom: 40px; text-transform: uppercase; font: 30px 'Oswald'; font-weight: 700; line-height: 50px; color: #e99; }
+h3 { margin: 0 0 8px 0; }
+
+.bg-1 { background: url(img/bg-1.jpg); }
+.bg-2 { background: url(img/bg-2.jpg); }
+.bg-3 { background: url(img/bg-3.jpg); }
+
+.game {
+	text-align: right; height: 150px; max-width: 600px;
+	margin: 25px auto; border-radius: 10px; padding: 20px;
+	border: 1px solid #666;
+}
+.game p {
+	font-size: 14px;
+	height: 32px;
+}
+
+.game.asteroids { background: url(img/game-asteroids.jpg); }
+.game.blocks { background: url(img/game-blocks.jpg); }
+.game.underground { background: url(img/game-underground.jpg); }
+.game.bubbles { background: url(img/game-bubbles.jpg); }
+.game.j5g3 { background: url(img/game-j5g3.jpg); }
+.game.j5g3-in { background: url(img/game-j5g3.in.jpg); }
+.game.docma { background: url(img/game-docma.jpg); }
+
+#demo {
+	background-color: #333; background-color: rgba(50, 50, 50, 0.6);
+	padding: 20px 5px; text-align: left;
+	margin-bottom: 50px;
+}
+#demo h3 { margin-top: 40px; }
+#demo canvas { background: #000; }
+#demo select { color: #111; font-size: 20px; }
+#demo ul { padding: 10px; }
+
+@media (max-width: 720px) {
+	#menu nav { float: none; text-align: center; }
+	#logo-container > img { margin: 80px 0 0 -120px; left: 50%; }	
+	section .container { padding-top: 380px; text-align: center; }
+	section { bottom: auto; }
+}
