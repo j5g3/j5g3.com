@@ -1,48 +1,20 @@
 
-(function onload()
+(function()
 {
 var
-	// GLOBALS
-	$loader = j5g3.loader(),
-	$input,
-	$engine,
-
-	// LOCALS
-	list = j5g3.id('demos'),
-	code,
-
-	get_url = function()
-	{
-		return 'demo/' + list.value.toLowerCase() + '.js';
-	},
-
-	onAjax = function()
-	{
-		if ($engine)
-			$engine.destroy();
-
-		if ($input)
-			$input.destroy();
-
-		$input = j5g3.in('screen');
-
-		// Clear all styles
-		j5g3.id('screen').setAttribute('style', '');
-
-		// uhhh eval
-		if (list.value)
-			$engine = j5g3.engine(eval(code.raw));
-	}
+	demo = document.getElementById('demos'),
+	iframe = document.getElementById('screen'),
+	option, rand,
+	base = '//j5g3.github.io/demo/'
 ;
-	list.onchange = function()
+	demo.onchange = function()
 	{
-		code = $loader.data(get_url());
-		$loader.ready(onAjax);
-	};
+		option = demo.options[demo.selectedIndex] || demo.options[0];
+		rand = Date.now();
 
-	window.view_source = function()
-	{
-		window.open(get_url(), '_blank');
+		iframe.src = base + (option.hasAttribute('compiled') ?
+			'compiled.html?' :
+			'demo.html?') + rand + '#' + demo.value;
 	};
 
 })();
