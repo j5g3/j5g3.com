@@ -2,7 +2,7 @@ body { font-family: 'Audiowide', sans-serif; padding: 20px; color: #eee; backgro
 
 .logo {
 	position: absolute; margin: 20px 0 20px 0; width: 240px; height: 284px; display: block;
-	transition: opacity 0.5s;
+	transition: opacity 0.25s;
 }
 .logo.retro { position: absolute; opacity: 0; }
 a:hover .logo { opacity: 0; }
@@ -18,7 +18,7 @@ a.btn:hover { color: #fff; }
 section {
 	position: absolute; display: none; top: 0; right: 0; left: 0; bottom: 0;
 	background-position: 50% 50%; background-attachment: fixed;
-	background-size: auto 100%;
+	background-size: cover;
 	overflow: auto; text-align: right;
 }
 section.active { display: block; }
@@ -33,27 +33,28 @@ h1 { margin-bottom: 30px; text-transform: uppercase; font: 60px 'Oswald'; font-w
 h2 { margin-bottom: 40px; text-transform: uppercase; font: 30px 'Oswald'; font-weight: 700; line-height: 50px; color: #e99; }
 h3 { margin: 0 0 8px 0; }
 
-.bg-1 { background: url(img/bg-1.jpg); }
-.bg-2 { background: url(img/bg-2.jpg); }
-.bg-3 { background: url(img/bg-3.jpg); }
+.bg-1 { background-image: url(img/bg-1.jpg); }
+.bg-2 { background-image: url(img/bg-2.jpg); }
+.bg-3 { background-image: url(img/bg-3.jpg); }
 
 .game {
-	text-align: right; height: 150px; max-width: 600px;
+	text-align: right; min-height: 150px; max-width: 600px;
 	margin: 25px auto; border-radius: 10px; padding: 20px;
 	border: 1px solid #666;
+	background-size: cover; background-position: 50% 50%;
 }
 .game p {
-	font-size: 14px;
-	height: 32px;
+	font-size: 18px;
+	margin-bottom: 20px;
 }
 
-.game.asteroids { background: url(img/game-asteroids.jpg); }
-.game.blocks { background: url(img/game-blocks.jpg); }
-.game.underground { background: url(img/game-underground.jpg); }
-.game.bubbles { background: url(img/game-bubbles.jpg); }
-.game.j5g3 { background: url(img/game-j5g3.jpg); }
-.game.j5g3-in { background: url(img/game-j5g3.in.jpg); }
-.game.docma { background: url(img/game-docma.jpg); }
+.game.asteroids { background-image: url(img/game-asteroids.jpg); }
+.game.blocks { background-image: url(img/game-blocks.jpg); }
+.game.underground { background-image: url(img/game-underground.jpg); }
+.game.bubbles { background-image: url(img/game-bubbles.jpg); }
+.game.j5g3 { background-image: url(img/game-j5g3.jpg); }
+.game.j5g3-in { background-image: url(img/game-j5g3.in.jpg); }
+.game.docma { background-image: url(img/game-docma.jpg); }
 
 #demo {
 	background-color: #333; background-color: rgba(50, 50, 50, 0.6);
