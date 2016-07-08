@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#slide {
+			width: 1026px; height: 660px;
+			background: url(assets/asteroids_BG.png);
+			margin: 10px auto;
+			text-align: center;
+			color: #eee;
+			font-family: sans-serif;
+		}
+		
+		#slide h1 {
+			padding-top: 100px;
+		}
+		
+		#slide span {
+			font: 20px sans-serif;		
+			margin-top: 50px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="slide">
+		<h1>Asteroid Space Adventure 2419</h1>
+		<span id="player"></span>
+		<span id="jason"></span>
+	</div>
+	
+	<script>
+	(function() {
+	var
+		p = document.getElementById('player'),
+		j = document.getElementById('jason'),
+		data = JSON.parse(localStorage.Asteroids) || { }
+	;
+		p.innerHTML = "Billy: " + data.score + ' points'; // (' + data.t + ')';
+		j.innerHTML = 'Jason: ' + (data.score + (-250+Math.random()*500 |0)) + ' points';
+		
+	})();
+	</script>
+	
+</body>
+</html>

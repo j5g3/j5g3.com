@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=1024, height=660" />
+	<title>Asteroids</title>	
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<canvas class="debug" width="1024" height="660" id="screen"></canvas>
+
+	<div id="debug">
+		<select id="debug-assets">
+		</select>	
+		<input id="debug-file" type="file" />
+	</div>
+	<div id="portrait-warning">
+		Please rotate your device to landscape mode.
+	</div>
+	
+	<script src="../j5g3/build/j5g3-all.dbg.js"></script>	
+	<script src="../j5g3-in/build/j5g3-in-all.js"></script>	
+	<script>
+	function dbg(assets, stage)
+	{
+	var
+		select = j5g3.id('debug-assets'),
+		file = j5g3.id('debug-file'),
+		reader = new FileReader(),
+		options = '',
+		i,
+		asset
+	;
+		reader.onload = function(ev)
+		{
+			asset = assets[select.value];
+			asset.removeAttribute('width');
+			asset.removeAttribute('height');
+			asset.src = ev.target.result;
+			
+			stage.each(function(clip) {
+				clip.invalidate && clip.invalidate();
+			});
+		}
+		
+		for (i in assets)
+			if (assets[i] instanceof HTMLImageElement)
+				options += '<option>' + i + '</option>';
+			
+		select.innerHTML = options;
+		
+		file.onchange = function(ev) {
+			var f = ev.target.files[0];
+			reader.readAsDataURL(f);
+		}
+	}
+	</script>
+	<script src="asteroids.js"></script>
+</body>
+</html>
